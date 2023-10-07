@@ -1,7 +1,8 @@
-module.exports = {
-    HOST: 'localhost',
-    USER: 'root',
-    PASSWORD: 'root',
-    DB: 'algayou',
-    PORT: 8889
-}
+import {Sequelize} from "sequelize";
+
+const db = new Sequelize('algayou', 'root', '', {
+    host: "localhost",
+    dialect: "mysql"
+});
+
+export default db;
